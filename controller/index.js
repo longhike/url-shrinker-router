@@ -15,7 +15,6 @@ router.get("/*", (req, res) => {
         alias_hash: search_param,
       },
     })
-    // .then(response => console.log(response))
     .then((response) => res.redirect(response.dataValues.target_url))
     .catch(err => console.log(err.message))
   }
